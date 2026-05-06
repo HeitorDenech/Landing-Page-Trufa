@@ -4,6 +4,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* -------------HEADER----------------- */
 
 header {
@@ -59,11 +63,25 @@ header button {
     gap: 10px;
     transition: all .55s ease-in-out;
     transform: scale(0.95);
+    animation: botao-animado 1s ease-in-out infinite;
 }
 
 header button:hover {
+    background-color: #ff7dcd;
     transform: scale(1);
     cursor: pointer;
+}
+
+@keyframes botao-animado {
+    0% {
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    100% {
+        transform: scale(0.95);
+    }
 }
 
 header button i {
@@ -83,7 +101,7 @@ header button a {
 main {
     background-color: #ffecfc;
     height: auto;
-    padding-bottom: 5vh;
+    /* padding-bottom: 5vh; */
     width: 100%;
     display: flex;
     align-items: center;
@@ -101,7 +119,7 @@ main {
     width: 100%;
     gap: 10px;
     cursor: default;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     /* background-color: red; */
 }
 
@@ -156,6 +174,150 @@ main h1 {
     margin-bottom: 2vh;
 }
 
+.containers-sabores-promocao{
+    margin-top: 5vh;
+    border-radius: 20px;
+    height: 20vh;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containers-sabores-promocao h2 {
+    margin-top: 2vh;
+    font-size: 1.1rem;
+    color: #272727;
+    text-align: center;
+    font-weight: normal;
+}
+
+.containers-sabores-promocao p {
+    color: gray;
+    margin-top: 2vh;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+span {
+    color: rgb(255, 75, 213);
+    font-weight: bold;
+}
+
+.container-promocao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-img{
+    height: 70vh;
+    width: 100%;
+}
+
+.container-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ---------------FOOTER------------------- */
+
+footer{
+    /* height: 60vh; */
+    /* margin-bottom: 10vh; */
+    width: 100%;
+    background-color: #ffecfc;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+footer h1{
+    margin-top: 10vh;
+    font-size: 2rem;
+    color: #2f2f2f;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+footer p{
+    margin-top: 5vh;
+    font-size: 1rem;
+    color: rgb(81, 81, 81);
+    letter-spacing: 1px;
+}
+
+.container-footer{
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    /* background-color: red; */
+    /* height: 20vh; */
+    width: 40%;
+}
+
+.container-contato{
+    height: 12vh;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: transparent;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all .55s ease-in-out;
+    transform: scale(0.95);
+}
+
+.container-contato:hover {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.container-contato a{
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+footer i{
+    font-size: 1rem;
+}
+
+.container-contato-span{
+    height: 12vh;
+    width: 40%;
+    background-color: rgb(255, 75, 213);
+    border-radius: 30px;
+    border: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all .55s ease-in-out;
+    transform: scale(0.95);
+}
+
+.container-contato-span:hover {
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.container-contato-span a{
+    text-decoration: none;
+}
+
+.container-contato-span i{
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
 /* ---------------RESPONSIVIDADE----------------- */
 
 @media (min-width: 1440px) {
@@ -169,6 +331,30 @@ main h1 {
 
     .containers-sabores {
         width: 22%;
+    }
+
+     .container-footer{
+        margin-top: 6vh;
+        margin-bottom: 15vh;
+        /* flex-direction: column; */
+        /* background-color: red; */
+        width: 50%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .container-contato{
+        width: 35%;
+        height: 8vh;
+    }
+
+    .container-contato-span{
+        width: 35%;
+        height: 8vh;
+    }
+
+    footer h1{
+        margin-top: 10vh;
     }
 }
 
@@ -189,6 +375,34 @@ main h1 {
     .containers-sabores {
         height: 35vh;
         width: 30%;
+    }
+
+    .container-img {
+        height: 70vh;
+    }
+
+    .container-footer{
+        margin-top: 6vh;
+        margin-bottom: 15vh;
+        /* flex-direction: column; */
+        /* background-color: red; */
+        width: 50%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .container-contato{
+        width: 35%;
+        height: 8vh;
+    }
+
+    .container-contato-span{
+        width: 35%;
+        height: 8vh;
+    }
+
+    footer h1{
+        margin-top: 10vh;
     }
 }
 
@@ -220,6 +434,32 @@ main h1 {
     main {
         height: auto;
         padding-bottom: 5vh;
+    }
+
+    .container-img {
+        height: 50vh;
+    }
+
+    .container-footer{
+        margin-top: 4vh;
+        flex-direction: column;
+        /* background-color: red; */
+        width: 60%;
+        gap: 20px;
+    }
+
+    .container-contato{
+        width: 80%;
+        height: 7vh;
+    }
+
+    .container-contato-span{
+        width: 80%;
+        height: 7vh;
+    }
+
+    footer h1{
+        margin-top: 2vh;
     }
 }
 
@@ -264,5 +504,46 @@ main h1 {
 
     main h1 {
         font-size: 1.8rem;
+    }
+
+    .containers-sabores-promocao{
+        width: 80%;
+        height: 12vh;
+    }
+
+    .containers-sabores-promocao h2 {
+        font-size: 1rem;
+        width: 80%;
+    }
+
+    .container-img {
+        height: 50vh;
+    }
+
+    .container-footer{
+        margin-top: 4vh;
+        flex-direction: column;
+        /* background-color: red; */
+        width: 60%;
+        gap: 20px;
+    }
+
+    .container-contato{
+        width: 80%;
+        height: 7vh;
+    }
+
+    .container-contato-span{
+        width: 80%;
+        height: 7vh;
+    }
+
+    footer h1{
+        margin-top: 2vh;
+    }
+
+    footer p{
+        width: 70%;
+        text-align: center;
     }
 }
