@@ -76,9 +76,11 @@ header button:hover {
     0% {
         transform: scale(0.95);
     }
+
     50% {
         transform: scale(0.98);
     }
+
     100% {
         transform: scale(0.95);
     }
@@ -174,7 +176,7 @@ main h1 {
     margin-bottom: 2vh;
 }
 
-.containers-sabores-promocao{
+.containers-sabores-promocao {
     margin-top: 5vh;
     border-radius: 20px;
     height: 20vh;
@@ -206,14 +208,14 @@ span {
     font-weight: bold;
 }
 
-.container-promocao{
+.container-promocao {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.container-img{
+.container-img {
     height: 70vh;
     width: 100%;
 }
@@ -226,7 +228,7 @@ span {
 
 /* ---------------FOOTER------------------- */
 
-footer{
+footer {
     /* height: 60vh; */
     /* margin-bottom: 10vh; */
     width: 100%;
@@ -237,7 +239,7 @@ footer{
     flex-direction: column;
 }
 
-footer h1{
+footer h1 {
     margin-top: 10vh;
     font-size: 2rem;
     color: #2f2f2f;
@@ -245,14 +247,14 @@ footer h1{
     letter-spacing: 1px;
 }
 
-footer p{
+footer p {
     margin-top: 5vh;
     font-size: 1rem;
     color: rgb(81, 81, 81);
     letter-spacing: 1px;
 }
 
-.container-footer{
+.container-footer {
     margin-top: 8vh;
     margin-bottom: 10vh;
     display: flex;
@@ -264,15 +266,19 @@ footer p{
     width: 40%;
 }
 
-.container-contato{
+.container-contato {
     height: 12vh;
     width: 40%;
-    background-color: rgb(255, 255, 255);
+    background-color: #25D366;
     border-radius: 30px;
     border: transparent;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transition: all .55s ease-in-out;
     transform: scale(0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 .container-contato:hover {
@@ -280,20 +286,31 @@ footer p{
     cursor: pointer;
 }
 
-.container-contato a{
+.container-contato a {
     font-size: 1rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    /* margin-left: -1vh; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 100%;
 }
 
-footer i{
+footer i {
+    /* margin-right: 1vh; */
     font-size: 1rem;
 }
 
-.container-contato-span{
+.container-contato-span {
     height: 12vh;
     width: 40%;
-    background-color: rgb(255, 75, 213);
+    /* background-color: rgb(255, 75, 213); */
+    background: linear-gradient(45deg, #FF4DA6, #C13584);
     border-radius: 30px;
     border: transparent;
     display: flex;
@@ -309,13 +326,55 @@ footer i{
     transform: scale(1);
 }
 
-.container-contato-span a{
+.container-contato-span a {
     text-decoration: none;
+
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    /* margin-left: -1vh; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 100%;  
+}
+
+.container-contato-span i {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+/* ----------------------FUNDO-BRANCO-ICONS--------------------- */
+
+.container-contato i,
+.container-contato-span i{
+    background-color: white;
+    
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-contato i{
+    color: #25D366;
 }
 
 .container-contato-span i{
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
+    color: #FF4DA6;
+}
+
+#seta{
+    background-color: transparent;
+    color: white;
 }
 
 /* ---------------RESPONSIVIDADE----------------- */
@@ -333,7 +392,7 @@ footer i{
         width: 22%;
     }
 
-     .container-footer{
+    .container-footer {
         margin-top: 6vh;
         margin-bottom: 15vh;
         /* flex-direction: column; */
@@ -343,22 +402,22 @@ footer i{
         justify-content: center;
     }
 
-    .container-contato{
-        width: 35%;
+    .container-contato {
+        width: 40%;
         height: 8vh;
     }
 
-    .container-contato-span{
-        width: 35%;
+    .container-contato-span {
+        width: 40%;
         height: 8vh;
     }
 
-    footer h1{
+    footer h1 {
         margin-top: 10vh;
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 1201px) and (max-width: 1439px) {
     header h1 {
         font-size: 3rem;
     }
@@ -381,27 +440,83 @@ footer i{
         height: 70vh;
     }
 
-    .container-footer{
+    .container-footer {
         margin-top: 6vh;
         margin-bottom: 15vh;
         /* flex-direction: column; */
         /* background-color: red; */
-        width: 50%;
+        width: 60%;
         gap: 20px;
         justify-content: center;
     }
 
-    .container-contato{
-        width: 35%;
-        height: 8vh;
+    .container-contato {
+        width: 40%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
     }
 
-    .container-contato-span{
-        width: 35%;
-        height: 8vh;
+    .container-contato-span {
+        width: 40%;
+        height: 10vh;
     }
 
-    footer h1{
+    footer h1 {
+        margin-top: 10vh;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header h2 {
+        width: 70%;
+        font-size: 1.3rem;
+    }
+
+    header button {
+        width: 25vw;
+    }
+
+    .containers-sabores {
+        height: 35vh;
+        width: 30%;
+    }
+
+    .container-img {
+        height: 70vh;
+    }
+
+    .container-footer {
+        margin-top: 6vh;
+        margin-bottom: 15vh;
+        /* flex-direction: column; */
+        /* background-color: red; */
+        width: 60%;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .container-contato {
+        width: 40%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .container-contato-span {
+        width: 40%;
+        height: 10vh;
+    }
+
+    footer h1 {
         margin-top: 10vh;
     }
 }
@@ -440,7 +555,7 @@ footer i{
         height: 50vh;
     }
 
-    .container-footer{
+    .container-footer {
         margin-top: 4vh;
         flex-direction: column;
         /* background-color: red; */
@@ -448,17 +563,17 @@ footer i{
         gap: 20px;
     }
 
-    .container-contato{
-        width: 80%;
-        height: 7vh;
+    .container-contato {
+        width: 60%;
+        height: 6.5vh;
     }
 
-    .container-contato-span{
-        width: 80%;
-        height: 7vh;
+    .container-contato-span {
+        width: 60%;
+        height: 6.5vh;
     }
 
-    footer h1{
+    footer h1 {
         margin-top: 2vh;
     }
 }
@@ -497,7 +612,7 @@ footer i{
         font-size: 0.8rem;
     }
 
-    main{
+    main {
         height: auto;
         padding-bottom: 5vh;
     }
@@ -506,7 +621,7 @@ footer i{
         font-size: 1.8rem;
     }
 
-    .containers-sabores-promocao{
+    .containers-sabores-promocao {
         width: 80%;
         height: 12vh;
     }
@@ -520,29 +635,29 @@ footer i{
         height: 50vh;
     }
 
-    .container-footer{
+    .container-footer {
         margin-top: 4vh;
         flex-direction: column;
         /* background-color: red; */
-        width: 60%;
+        width: 65%;
         gap: 20px;
     }
 
-    .container-contato{
-        width: 80%;
-        height: 7vh;
+    .container-contato {
+        width: 100%;
+        height: 6vh;
     }
 
-    .container-contato-span{
-        width: 80%;
-        height: 7vh;
+    .container-contato-span {
+        width: 100%;
+        height: 6vh;
     }
 
-    footer h1{
+    footer h1 {
         margin-top: 2vh;
     }
 
-    footer p{
+    footer p {
         width: 70%;
         text-align: center;
     }
