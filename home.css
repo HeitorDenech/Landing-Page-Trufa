@@ -639,18 +639,18 @@ footer i {
         margin-top: 4vh;
         flex-direction: column;
         /* background-color: red; */
-        width: 65%;
+        width: 68%;
         gap: 20px;
     }
 
     .container-contato {
         width: 100%;
-        height: 6vh;
+        height: 6.5vh;
     }
 
     .container-contato-span {
         width: 100%;
-        height: 6vh;
+        height: 6.5vh;
     }
 
     footer h1 {
